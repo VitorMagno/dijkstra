@@ -17,7 +17,6 @@ int main(int argc, char const *argv[])
     }
     fstream entrada;
     string linhas, v, e;
-    
     // colocar a primeira linha que contem a quantidade de vertices e arestas num Vetor e em seguida em
     //duas variaveis V e E 
     entrada.open("exemplo.txt", ios::in);
