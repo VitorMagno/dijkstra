@@ -22,3 +22,5 @@
 
 # Ignore code-workspaces
 *.code-workspace
+### Executable ###
+*.exe
