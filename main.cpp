@@ -1,7 +1,6 @@
 #include<iostream>
 #include<fstream>
 #include<string>
-#include<typeinfo>
 #include<vector>
 #include<sstream>
 
@@ -46,6 +45,6 @@ int main(int argc, char const *argv[])
         cout << "vertice " << vertAtual <<" se liga ao vertice " <<row[i+1]<<", com peso ("<<row[i+2]<<")"<< endl;
     }
     //cout<< get<0> (g[1][0]);
-    //par 0-v 1-peso [vert][vizinhos]
+    //get<0-vert><1-peso> g[vert][vizinhos]
     return 0;
 }
