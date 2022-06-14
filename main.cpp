@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
     fin.open(argv[2], ios::in);
     string line, word, temp;
     // colocar a primeira linha que contem a quantidade de vertices e arestas num Vetor e em seguida em
-    //duas variaveis V e E 
+    //duas variaveis V e E (checked)
     vector<int> row;
         
     while(fin){
@@ -33,26 +33,19 @@ int main(int argc, char const *argv[])
         while(getline(s, temp, ' ')){
             int n = stoi(temp);
             row.push_back(n);
-            cout<<n<<endl;
+            //cout<<n<<endl;
         }
+    }
 
-    }    
-    /*while (fin >> temp){
-        row.clear();
-        getline(fin, line);
-
-        stringstream s(line);
-
-        while(getline(s,word,' ')){
-            row.push_back(word);
-        }
-    }*/
-   
-    /*for (int i = linhas.length(); i ==0; i --){
-        if (linhas[i] != ){
-            cout<<linhas[i]<< endl;
-        }
-    }*/
-    
+    int vert = row[0];
+    int edg = row[1];
+    vector<vector<pair<int,int>>> g(vert);
+    for (int i = 2; i < row.size()-3; i = i+3){
+        int vertAtual = row[i];
+        g[vertAtual-1].push_back({row[i+1],row[i+2]});
+        cout << "vertice " << vertAtual <<" se liga ao vertice " <<row[i+1]<<", com peso ("<<row[i+2]<<")"<< endl;
+    }
+    //cout<< get<0> (g[1][0]);
+    //par 0-v 1-peso [vert][vizinhos]
     return 0;
 }
